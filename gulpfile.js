@@ -51,6 +51,12 @@ function images() {
   .pipe(dest('build/images/'))
 }
 
+function fonts() {
+  return src('source/fonts/**/*.{woff, woff2}')
+  .pipe(newer('build/fonts/'))
+  .pipe(dest('build/fonts/'))
+}
+
 function cleanimg() {
   return del('build/images/**/*', { force: true })
 }
@@ -82,9 +88,9 @@ exports.styles       = styles;
 exports.html         = html;
 exports.images       = images;
 exports.cleanimg     = cleanimg;
-exports.build        = series(cleanbuild, styles, scripts, html, images)
+exports.build        = series(cleanbuild, fonts, styles, scripts, html, images)
 
-exports.default      = parallel(styles, html, scripts, browsersync, startwatch);
+exports.default      = parallel(fonts, images, styles, html, scripts, browsersync, startwatch);
 
 
 

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Питание для котов CAT ENERGY</title>
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     
@@ -39,7 +40,7 @@
         <div class="form__wrapper">
           <div class="form__block form__block--personal">
             <h2 class="visually-hidden">Данные кота</h2>
-            <div class="form__fields">
+            <div class="form__fields field">
               <div class="form__row field-text">
                 <label for="cat-name" class="field-text__label">Имя:*</label>
                 <input type="text" class="field-text__input" name="cat-name" id="cat-name" placeholder="Барсик" required>
@@ -56,7 +57,7 @@
           </div>
           <div class="form__block form__block--program">
             <h2 class="visually-hidden">Выбор программы</h2>
-            <div class="form__fields">
+            <div class="form__fields field">
               <div class="form__row field-radio">
                 <input type="radio" class="field-radio__input" name="program" value="weight-loss" id="weight-loss" checked>
                 <label for="weight-loss" class="field-radio__label">Похудение</label>
@@ -73,16 +74,16 @@
           </div>
           <div class="form__block form__block--contact">
             <h2 class="form__block-subtitle">Контактные данные (владельца кота)</h2>
-            <div class="form__fields">
+            <div class="form__fields field">
               <div class="form__row field-text">
-                <label for="owner-email" class="field-text__label--email">E-mail:*</label>
+                <label for="owner-email" class="field-text__label field-text__label--email">E-mail:*</label>
                 <div class="field-text__input-wrapper field-text__input-wrapper--icon">
                   <input type="email" class="field-text__input" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
                   <svg class="field-text__icon field-text__icon--email"></svg>
                 </div>
               </div>
               <div class="form__row field-text">
-                <label for="owner-tel" class="field-text__label--tel">Телефон:*</label>
+                <label for="owner-tel" class="field-text__label field-text__label--tel">Телефон:*</label>
                 <div class="field-text__input-wrapper field-text__input-wrapper--icon">
                   <input type="tel" class="field-text__input" name="owner-tel" id="owner-tel" placeholder="8 (960) 900-60-90" required>
                   <svg class="field-text__icon field-text__icon--tel"></svg>
@@ -92,7 +93,7 @@
           </div>
           <div class="form__block form__block--comment">
             <h2 class="form__block-subtitle">Комментарий</h2>
-            <div class="form__fields">
+            <div class="form__fields field">
               <div class="form__row field-text">
                 <label for="owner-comment" class="field-text__label visually-hidden">Введите комментарий</label>
                 <textarea type="text" class="field-text__input field-text__input--comment" name="owner-comment" id="owner-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -121,23 +122,24 @@
             </div>
           </div>
           <div class="form__block form__block--button">
-            <input type="submit" class="form__button" value="Отправить заявку">
+            <input type="submit" class="form__button button" value="Отправить заявку">
           </div>
           <div class="form__block form__block--note">
             <small class="form__note-text">* — Обязательные поля</small>
           </div>
         </div>
       </form>
+      
+    </main>
     
-      <section class="contacts">
+    <footer class="page-footer">
+     
+      <section class="page-footer contacts">
         <p class="contacts__text">приглашаем  к сотрудничеству  дилеров!</p>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
         <div class="contacts__map"></div>
       </section>
       
-    </main>
-    
-    <footer class="page-footer">
       <div class="page-footer__logo footer-logo">
         <a href="" class="footer-logo__link">
           <img src="" alt="" class="footer-logo__img">
