@@ -53,7 +53,6 @@ function images() {
 
 function fonts() {
   return src('source/fonts/**/*.{woff, woff2}')
-  .pipe(newer('build/fonts/'))
   .pipe(dest('build/fonts/'))
 }
 
