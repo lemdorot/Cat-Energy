@@ -1,3 +1,7 @@
+.catalog {
+	padding: 0 20px;
+}
+
 .catalog__title {
   font-weight: 400;
   line-height: 60px;
@@ -6,4 +10,20 @@
 
 .catalog__list {
   .reset-list;
+  
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog__item {
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+  
+  @media (min-width: 1300px) {
+    width: 25%;
+  }
 }

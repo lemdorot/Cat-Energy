@@ -1,9 +1,23 @@
 .gift {
-  background: url(../images/gift-photo-mobile.jpg) center 100% no-repeat;
+  padding: 0 20px;
+  
+  @media (min-width: 1300px) {
+    width: 25%;
+  }
+}
+
+.gift__wrapper {
+	background: url(../images/gift-photo-mobile.jpg) center 100% no-repeat;
   background-size: cover;
+  
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .gift__text {
+  font-family: "Arial", sans-serif;
   line-height: 20px;
   font-size: 16px;
   color: #ffffff;

@@ -7,7 +7,7 @@
   </head>
   <body>
     
-    <header class="page-header">
+    <header class="page-header container">
       <div class="page-header__wrapper">
         <a class="page-header__logo-link" href="">
           <img class="page-header__logo-img" src="" alt="">
@@ -34,14 +34,14 @@
     
     <main class="page-main">
       
-      <section class="intro">
+      <section class="intro container">
         <h1 class="intro__title">Функциональное питание для котов</h1>
         <p class="intro__slogan">Занялся собой? Займись котом!</p>
         <img src="" alt="" class="intro__img">
         <button class="intro__button button" type="button">Подобрать программу</button>
       </section>
       
-      <section class="categories">
+      <section class="categories container">
         <ul class="categories__list">
           <li class="categories__item">
             <h3 class="categories__title">Похудение</h3>
@@ -56,7 +56,7 @@
         </ul>
       </section>
       
-      <section class="advantages">
+      <section class="advantages container">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
@@ -74,21 +74,23 @@
         </ul>
       </section>
       
-      <section class="demo">
-        <h2 class="demo__title">Живой пример</h2>
-        <p class="demo__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-        <div class="demo__stats">
-          <ul class="demo__stats-list">
-            <li class="demo__stats-item">
-              <p class="demo__stats-value">5 кг</p>
-              <small class="demo__stats-subtitle">снижение  веса</small>
-            </li>
-            <li class="demo__stats-item">
-              <p class="demo__stats-value">60 дней</p>
-              <small class="demo__stats-subtitle">затрачено  времени</small>
-            </li>
-          </ul>
-          <p class="demo__stats-text">Затраты на питание: 15 000 руб.</p>
+      <section class="demo container">
+        <div class="demo__wrapper">
+          <h2 class="demo__title">Живой пример</h2>
+          <p class="demo__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+          <div class="demo__stats">
+            <ul class="demo__stats-list">
+              <li class="demo__stats-item">
+                <p class="demo__stats-value">5 кг</p>
+                <small class="demo__stats-subtitle">снижение  веса</small>
+              </li>
+              <li class="demo__stats-item">
+                <p class="demo__stats-value">60 дней</p>
+                <small class="demo__stats-subtitle">затрачено  времени</small>
+              </li>
+            </ul>
+            <p class="demo__stats-text">Затраты на питание: 15 000 руб.</p>
+          </div>
         </div>
         <div class="demo__slider slider">
           <div class="slider__images">
@@ -105,36 +107,41 @@
       
     </main>
     
-    <footer class="page-footer">
+    <footer class="page-footer container">
      
       <section class="page-footer contacts contacts--bg-white">
-        <p class="contacts__text">приглашаем  к сотрудничеству  дилеров!</p>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
+        <div class="contacts__wrapper">
+          <p class="contacts__text">приглашаем  к сотрудничеству  дилеров!</p>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
+        </div>
         <div class="contacts__map"></div>
       </section>
-     
-      <div class="page-footer__logo footer-logo">
-        <a href="" class="footer-logo__link">
-          <img src="" alt="" class="footer-logo__img">
-        </a>
+      
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo footer-logo">
+          <a href="" class="footer-logo__link">
+            <img src="" alt="" class="footer-logo__img">
+          </a>
+        </div>
+        <div class="page-footer__social footer-social">
+          <ul class="footer-social__list">
+            <li class="footer-social__item">
+              <a href="" class="footer-social__link"></a>
+            </li>
+            <li class="footer-social__item">
+              <a href="" class="footer-social__link"></a>
+            </li>
+            <li class="footer-social__item">
+              <a href="" class="footer-social__link"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright footer-copyright">
+          <b class="footer-copyright__text">HTML Academy</b>
+          <a href="" class="footer-copyright__link"></a>
+        </div>
       </div>
-      <div class="page-footer__social footer-social">
-        <ul class="footer-social__list">
-          <li class="footer-social__item">
-            <a href="" class="footer-social__link"></a>
-          </li>
-          <li class="footer-social__item">
-            <a href="" class="footer-social__link"></a>
-          </li>
-          <li class="footer-social__item">
-            <a href="" class="footer-social__link"></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright footer-copyright">
-        <b class="footer-copyright__text">HTML Academy</b>
-        <a href="" class="footer-copyright__link"></a>
-      </div>
+      
     </footer>
     
   </body>

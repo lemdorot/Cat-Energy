@@ -2,18 +2,40 @@
   color: #ffffff;
   background: url(../images/index-background-mobile.jpg) center 100%  no-repeat;
   background-size: cover;
+  padding: 0 20px;
+  
+  @media (min-width: 768px) {
+    background-image: none;
+  }
+  
+  @media (min-width: 1300px) {
+    background: url(../images/index-background-desktop.jpg);
+    background-position: calc(100% + 70px) 0;
+    background-size: 680px 696px;
+    background-repeat: no-repeat;
+  }
 }
 
 .intro__title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  
+  @media (min-width: 768px) {
+    color: #111111;
+  }
 }
 
 .intro__slogan,
 .intro__button {
   line-height: 14px;
   text-transform: uppercase;
+}
+
+.intro__slogan {
+  @media (min-width: 768px) {
+    color: #111111;
+  }
 }
 
 .intro__button {

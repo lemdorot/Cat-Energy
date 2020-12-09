@@ -7,7 +7,7 @@
   </head>
   <body>
     
-    <header class="page-header">
+    <header class="page-header container">
       <div class="page-header__wrapper">
         <a class="page-header__logo-link" href="">
           <img class="page-header__logo-img" src="" alt="">
@@ -34,7 +34,7 @@
     
     <main class="page-main">
     
-      <form class="form">
+      <form class="form container">
         <h1 class="form__title">Подбор программы</h1>
         <p class="form__text">Заполните анкету и мы подберем  программу питания для вашего кота</p>
         <div class="form__wrapper">
@@ -74,15 +74,15 @@
           </div>
           <div class="form__block form__block--contact">
             <h2 class="form__block-subtitle">Контактные данные (владельца кота)</h2>
-            <div class="form__fields field">
-              <div class="form__row field-text">
+            <div class="form__fields form__fields--contact field">
+              <div class="form__row field-text field-text--email">
                 <label for="owner-email" class="field-text__label field-text__label--email">E-mail:*</label>
                 <div class="field-text__input-wrapper field-text__input-wrapper--icon">
                   <input type="email" class="field-text__input" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
                   <svg class="field-text__icon field-text__icon--email"></svg>
                 </div>
               </div>
-              <div class="form__row field-text">
+              <div class="form__row field-text field-text--tel">
                 <label for="owner-tel" class="field-text__label field-text__label--tel">Телефон:*</label>
                 <div class="field-text__input-wrapper field-text__input-wrapper--icon">
                   <input type="tel" class="field-text__input" name="owner-tel" id="owner-tel" placeholder="8 (960) 900-60-90" required>
@@ -102,9 +102,9 @@
           </div>
           <div class="form__block form__block--add">
             <h2 class="form__block-subtitle">Дополнительно</h2>
-            <div class="form__fields">
+            <div class="form__fields form__fields--add">
               <div class="form__row field-check">
-                <input type="checkbox" class="field-radio__input" name="sweetener" id="sweetener" value="sweetener" checked>
+                <input type="checkbox" class="field-check__input" name="sweetener" id="sweetener" value="sweetener" checked>
                 <label for="sweetener" class="field-check__label">Сахарозаменитель</label>
               </div>              
               <div class="form__row field-check">
@@ -123,8 +123,6 @@
           </div>
           <div class="form__block form__block--button">
             <input type="submit" class="form__button button" value="Отправить заявку">
-          </div>
-          <div class="form__block form__block--note">
             <small class="form__note-text">* — Обязательные поля</small>
           </div>
         </div>
@@ -132,36 +130,41 @@
       
     </main>
     
-    <footer class="page-footer">
+    <footer class="page-footer container">
      
-      <section class="page-footer contacts">
-        <p class="contacts__text">приглашаем  к сотрудничеству  дилеров!</p>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
+      <section class="page-footer contacts contacts--bg-white">
+        <div class="contacts__wrapper">
+          <p class="contacts__text">приглашаем  к сотрудничеству  дилеров!</p>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
+        </div>
         <div class="contacts__map"></div>
       </section>
       
-      <div class="page-footer__logo footer-logo">
-        <a href="" class="footer-logo__link">
-          <img src="" alt="" class="footer-logo__img">
-        </a>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo footer-logo">
+          <a href="" class="footer-logo__link">
+            <img src="" alt="" class="footer-logo__img">
+          </a>
+        </div>
+        <div class="page-footer__social footer-social">
+          <ul class="footer-social__list">
+            <li class="footer-social__item">
+              <a href="" class="footer-social__link"></a>
+            </li>
+            <li class="footer-social__item">
+              <a href="" class="footer-social__link"></a>
+            </li>
+            <li class="footer-social__item">
+              <a href="" class="footer-social__link"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright footer-copyright">
+          <b class="footer-copyright__text">HTML Academy</b>
+          <a href="" class="footer-copyright__link"></a>
+        </div>
       </div>
-      <div class="page-footer__social footer-social">
-        <ul class="footer-social__list">
-          <li class="footer-social__item">
-            <a href="" class="footer-social__link"></a>
-          </li>
-          <li class="footer-social__item">
-            <a href="" class="footer-social__link"></a>
-          </li>
-          <li class="footer-social__item">
-            <a href="" class="footer-social__link"></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright footer-copyright">
-        <b class="footer-copyright__text">HTML Academy</b>
-        <a href="" class="footer-copyright__link"></a>
-      </div>
+      
     </footer>
     
   </body>

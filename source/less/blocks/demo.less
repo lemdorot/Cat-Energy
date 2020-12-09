@@ -1,5 +1,17 @@
 .demo {
   background-color: #f2f2f2;
+  
+  @media (min-width: 1300px) {
+    display: flex;
+  }
+}
+
+.demo__wrapper {
+  padding: 0 20px;
+  
+  @media (min-width: 1300px) {
+    width: 50%;
+  }
 }
 
 .demo__title {
@@ -8,8 +20,23 @@
   font-size: 36px;
 }
 
+.demo__stats {
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @media (min-width: 1300px) {
+    flex-direction: column;
+  }
+}
+
 .demo__stats-list {
   .reset-list;
+  
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .demo__stats-value {
@@ -29,4 +56,12 @@
 
 .demo__text {
 	font-family: "Arial", sans-serif;
+}
+
+.demo__slider {
+  padding: 0 20px;
+  
+  @media (min-width: 1300px) {
+    width: 50%;
+  }
 }

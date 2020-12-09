@@ -1,11 +1,32 @@
+.goods {
+  @media (min-width: 1300px) {
+    display: flex;
+  }
+}
+
+.goods__wrapper {
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between
+  }
+  
+  @media (min-width: 1300px) {
+    width: 100%;
+  }
+}
+
 .goods__name {
   font-weight: 400;
   line-height: 16px;
   font-size: 16px;
+  text-transform: uppercase;
 }
 
 .goods__info {
   .reset-list;
+  
+  display: flex;
+  justify-content: space-between;
 }
 
 .goods__field,
@@ -17,4 +38,12 @@
 
 .goods__button {
 	background-color: #68b738;
+  
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+  
+  @media (min-width: 1300px) {
+    width: 20%;
+  }
 }

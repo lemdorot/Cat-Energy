@@ -1,4 +1,5 @@
 .form__title {
+  font-weight: 400;
   line-height: 60px;
   font-size: 36px;
 }
@@ -16,10 +17,47 @@
 }
 
 .form__note-text {
+  font-family: "Arial", sans-serif;
   line-height: 16px;
   font-size: 14px;
 }
 
 .form__button {
   background-color: #68b738;
+}
+
+.form__fields--add {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form__fields--contact {
+  @media (min-width: 1300px) {
+    display: flex;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: 1300px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form__block--personal,
+.form__block--program {
+  @media (min-width: 1300px) {
+    width: 45%;
+  }
+}
+
+.form__block--contact,
+.form__block--comment,
+.form__block--add,
+.form__block--button {
+	@media (min-width: 1300px) {
+    width: 100%;
+  }
 }

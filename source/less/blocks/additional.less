@@ -1,3 +1,7 @@
+.additional {
+	padding: 0 20px;
+}
+
 .additional__title {
   font-weight: 400;
   line-height: 24px;
@@ -6,4 +10,14 @@
 
 .additional__goods-list {
   .reset-list;
+  
+  @media (min-width: 1300px) {
+    width: 75%;
+  }
+}
+
+.additional__wrapper {
+  @media (min-width: 1300px) {
+    display: flex;
+  }
 }

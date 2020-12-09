@@ -7,14 +7,44 @@
 
 .product__info-field,
 .product__info-value {
+  font-family: "Arial", sans-serif;
 	line-height: 16px;
   font-size: 12px;
 }
 
 .product__info-list {
   .reset-list;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.product__info-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .product__button {
 	background-color: #68b738;
+  
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+}
+
+.product__wrapper {
+  display: flex;
+  
+  @media (min-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.product__photo {
+	width: 50%;
+  height: auto;
+}
+
+.product__description {
+	width: 50%;
 }
