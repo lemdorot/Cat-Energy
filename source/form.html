@@ -10,10 +10,14 @@
     <header class="page-header container">
       <div class="page-header__wrapper">
         <a class="page-header__logo-link" href="">
-          <img class="page-header__logo-img" src="" alt="">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="images/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+            <img class="page-header__logo" src="images/logo-mobile.svg" alt="Логотип Cat Energy">
+          </picture>
         </a>
         <a class="page-header__title-link" href="">
-          <img class="page-header__title-img" src="" alt="">
+          <img class="page-header__title-img" src="images/logo-mobile-header.svg" alt="Название корма">
         </a>
         <button class="page-header__toggle" type="button">Открыть меню</button>
       </div>
@@ -79,14 +83,14 @@
                 <label for="owner-email" class="field-text__label field-text__label--email">E-mail:*</label>
                 <div class="field-text__input-wrapper field-text__input-wrapper--icon">
                   <input type="email" class="field-text__input" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
-                  <svg class="field-text__icon field-text__icon--email"></svg>
+                  <img src="images/icon-mail.svg" class="field-text__icon field-text__icon--email">
                 </div>
               </div>
               <div class="form__row field-text field-text--tel">
                 <label for="owner-tel" class="field-text__label field-text__label--tel">Телефон:*</label>
                 <div class="field-text__input-wrapper field-text__input-wrapper--icon">
                   <input type="tel" class="field-text__input" name="owner-tel" id="owner-tel" placeholder="8 (960) 900-60-90" required>
-                  <svg class="field-text__icon field-text__icon--tel"></svg>
+                  <img src="images/icon-phone.svg" class="field-text__icon field-text__icon--tel">
                 </div>
               </div>
             </div>
@@ -143,25 +147,33 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo footer-logo">
           <a href="" class="footer-logo__link">
-            <img src="" alt="" class="footer-logo__img">
+            <img src="images/logo-footer.svg" alt="" class="footer-logo__img">
           </a>
         </div>
         <div class="page-footer__social footer-social">
           <ul class="footer-social__list">
             <li class="footer-social__item">
-              <a href="" class="footer-social__link"></a>
+              <a href="" class="footer-social__link">
+                <img src="images/icon-vk-mobile.svg" alt="Vkontakte" class="footer-social__img" width="22" height="12">
+              </a>
             </li>
             <li class="footer-social__item">
-              <a href="" class="footer-social__link"></a>
+              <a href="" class="footer-social__link">
+                <img src="images/icon-insta-mobile.svg" alt="Instagram" class="footer-social__img" width="16" height="16">
+              </a>
             </li>
             <li class="footer-social__item">
-              <a href="" class="footer-social__link"></a>
+              <a href="" class="footer-social__link">
+                <img src="images/icon-fb-mobile.svg" alt="Facebook" class="footer-social__img" width="10" height="19">
+              </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright footer-copyright">
           <b class="footer-copyright__text">HTML Academy</b>
-          <a href="" class="footer-copyright__link"></a>
+          <a href="" class="footer-copyright__link">
+            <img src="images/icon-htmlacademy.svg" alt="HTMLAcademy" class="footer-social__img" width="27" height="35">
+          </a>
         </div>
       </div>
       

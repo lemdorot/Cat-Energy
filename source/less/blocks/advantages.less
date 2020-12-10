@@ -18,12 +18,64 @@
 }
 
 .advantages__item {
+  position: relative;
+  padding-left: 80px;
+  
   @media (min-width: 768px) {
     width: 40%;
   }
   
   @media (min-width: 1300px) {
     width: 20%;
+  }
+  
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px 50px;
+  }
+  
+  &--leaf::before {
+    background-image: url(../../images/advantage-leaf@1x.png);
+  }
+    
+  &--powder::before {
+    background-image: url(../../images/advantage-powder@1x.png);
+  }
+    
+  &--dinning::before {
+    background-image: url(../../images/advantage-dining@1x.png);
+  }
+    
+  &--clock::before {
+    background-image: url(../../images/advantage-clock@1x.png);
+  }
+    
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    &--leaf::before {
+      background-image: url(../../images/advantage-leaf@2x.png);
+    }
+
+    &--powder::before {
+      background-image: url(../../images/advantage-powder@2x.png);
+    }
+
+    &--dinning::before {
+      background-image: url(../../images/advantage-dining@2x.png);
+    }
+
+    &--clock::before {
+      background-image: url(../../images/advantage-clock@2x.png);
+    }
   }
 }
 
