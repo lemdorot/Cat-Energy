@@ -1,67 +1,227 @@
 .demo {
+  position: relative;
+  margin-bottom: 1px;
+  padding-bottom: 35px;
   background-color: #f2f2f2;
   
+  @media (min-width: 768px) {
+    background-color: transparent;
+    border-top: 1px solid #e6e6e6;
+    
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 463px;
+      background-color: #f2f2f2;
+      z-index: -1;
+    }
+  }
+  
   @media (min-width: 1300px) {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 55px;
+    &::before {
+      height: 442px;
+    }
+  }
+}
+
+.demo__inner {
+	@media (min-width: 1300px) {
     display: flex;
+    padding-left: 40px;
   }
 }
 
 .demo__wrapper {
+  margin-bottom: 19px;
   padding: 0 20px;
+  padding-top: 17px;
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+  
+  @media (min-width: 768px) {
+    padding: 0 30px;
+    padding-top: 43px;
+    margin-bottom: 50px;
+  }
   
   @media (min-width: 1300px) {
-    width: 50%;
+    padding: 0;
+    padding-top: 56px;
+    margin-bottom: 0;
+    width: 35%;
+    margin-right: 130px;
   }
 }
 
 .demo__title {
-  font-weight: 400;
+  margin-bottom: 23px;
   line-height: 60px;
   font-size: 36px;
+  
+  @media (min-width: 768px) {
+    font-size: 60px;
+    margin-bottom: 64px;
+  }
+  
+  @media (min-width: 1300px) {
+    margin-bottom: 146px;
+  }
 }
 
 .demo__stats {
+  background-color: #f2f2f2;
+  
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
+    background-color: #ffffff;
   }
   
   @media (min-width: 1300px) {
     flex-direction: column;
+    background-color: #f2f2f2;
   }
 }
 
 .demo__stats-list {
-  .reset-list;
+  margin-bottom: 34px;
+  background-color: inherit;
+  display: flex;
+  justify-content: space-between;
   
   @media (min-width: 768px) {
     display: flex;
+    width: 51.8%;
+  }
+  
+  @media (min-width: 1300px) {
+    margin-bottom: 49px;
+    width: 83%;
   }
 }
 
 .demo__stats-value {
+  margin-bottom: 9px;
   line-height: 24px;
   font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  
+  @media (min-width: 768px) {
+    line-height: 37.02px;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
 }
 
 .demo__stats-subtitle {
+  display: inline-block;
+  margin: auto;
+  margin-bottom: -16px;
+  padding: 0 15px;
   line-height: 12px;
   font-size: 12px;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  background-color: inherit;
+  
+  @media (min-width: 768px) {
+    margin-bottom: -6px;
+    line-height: 14px;
+    font-size: 14px;
+    padding: 0 8px;
+    & br {
+      display: none;
+    }
+  }
 }
 
 .demo__stats-text {
+  margin-bottom: 15px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+  
+  & br {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    width: 40%;
+    text-align: end;
+    font-size: 20px;
+    padding-top: 7px;
+    line-height: 29px;
+    
+    & br {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 1300px) {
+    display: flex;
+    width: 74%;
+    text-align: left;
+    
+    & br {
+      display: none;
+    }
+    
+    & span {
+      display: inline-block;
+      margin-left: auto;
+    }
+  }
+}
+
+.demo__stats-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 44.2%;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+  background-color: inherit;
+  padding-top: 13px;
+  
+  @media (min-width: 768px) {
+    padding-top: 15px;
+  }
 }
 
 .demo__text {
+  padding-right: 5px;
 	font-family: "Arial", sans-serif;
+  margin-bottom: 25px;
+  
+  @media (min-width: 768px) {
+    padding-right: 10px;
+    margin-bottom: 53px;
+  }
+  
+  @media (min-width: 1300px) {
+    margin-bottom: 68px;
+  }
 }
 
 .demo__slider {
-  padding: 0 20px;
+  @media (min-width: 768px) {
+    padding: 0 30px;
+    margin-bottom: 33px;
+  }
   
   @media (min-width: 1300px) {
-    width: 50%;
+    padding: 0;
+    margin-bottom: 0;
+    width: 677px;
+    margin-right: -11px;
   }
 }

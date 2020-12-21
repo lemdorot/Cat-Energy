@@ -1,23 +1,120 @@
+.contacts {
+  @media (min-width: 1300px) {
+    padding-top: 0;
+    position: relative;
+  }
+}
+
 .contacts__wrapper {
   padding: 0 20px;
+  padding-top: 28px;
+  margin-bottom: 26px;
+  display: flex;
+  justify-content: space-between;
   
   @media (min-width: 768px) {
+    margin-bottom: 56px;
+    padding: 0 71px;
+    padding-top: 65px;
     display: flex;
     justify-content: space-between;
+  }
+  
+  @media (min-width: 1300px) {
+    width: auto;
+    background-color: #ffffff;
+    margin: 0;
+    padding-left: 76px;
+    padding-right: 49px;
+    padding-top: 65px;
+    padding-bottom: 56px;
+    display: inline-flex;
+    position: absolute;
+    justify-content: flex-start;
+    top: 95px;
+    left: 40px;
   }
 }
 
 .contacts__text {
+  width: 50%;
   line-height: 20px;
   font-size: 16px;
   text-transform: uppercase;
+  
+  @media (min-width: 768px) {
+    width: 35%;
+    line-height: 25px;
+    font-size: 20px;
+  }
+  
+  @media (min-width: 1300px) {
+    width: 45%;
+    margin-right: 54px;
+  }
 }
 
 .contacts__address {
+  width: 50%;
   font-family: "Arial", sans-serif;
   line-height: 20px;
+  
+  & br:last-child {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    width: 35%;
+    text-align: end;
+    
+    & br:last-child {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 1300px) {
+    width: 45%;
+    text-align: left;
+  }
 }
 
-.contacts--bg-white {
+.contacts--index {
   background-color: #ffffff;
+}
+
+.contacts__map {
+	height: 362px;
+  width: 100%;
+  background: url(../../images/bg-map-mobile@1x.png) center no-repeat;
+  
+  @media (min-resolution: 144dpi),
+     (min-resolution: 1.5dppx) {
+       background: url(../../images/bg-map-mobile@2x.png) center no-repeat;
+  }
+  
+  @media (min-width: 768px) {
+    background: url(../../images/bg-map-tablet@1x.png) center no-repeat;
+    
+    @media (min-resolution: 144dpi),
+     (min-resolution: 1.5dppx) {
+       background: url(../../images/bg-map-tablet@2x.png) center no-repeat;
+    }
+  }
+  
+  @media (min-width: 1300px) {
+    background: url(../../images/bg-map-desktop@1x.png) center no-repeat;
+    
+    @media (min-resolution: 144dpi),
+     (min-resolution: 1.5dppx) {
+       background: url(../../images/bg-map-desktop@2x.png) center no-repeat;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    height: 396px;
+  }
+  
+  @media (min-width: 1300px) {
+    height: 400px;
+  }
 }

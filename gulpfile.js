@@ -11,6 +11,9 @@ const cleancss      = require('gulp-clean-css');
 const imagemin      = require('gulp-imagemin');
 const newer         = require('gulp-newer');
 const del           = require('del');
+const svgstore      = require('gulp-svgstore');
+const webp          = require('gulp-webp');
+const rename        = require('gulp-rename');
 
 function browsersync() {
   browserSync.init({
@@ -33,7 +36,7 @@ function styles() {
   .pipe(eval(preprocessor)())
   .pipe(concat('style.min.css'))
   .pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'], grid: true }))
-  .pipe(cleancss(( { level: { 1: { specialComments: 0 } }/*, format: 'beautify'*/ } )))
+  .pipe(cleancss(( { level: { 1: { specialComments: 0 } } } )))
   .pipe(dest('build/css/'))
   .pipe(browserSync.stream())
 }
@@ -41,14 +44,25 @@ function styles() {
 function html() {
   return src('source/*html')
     .pipe(dest("build"))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 }
 
 function images() {
   return src('source/images/**/*.{png,jpg,svg}')
   .pipe(newer('build/images/'))
+  .pipe(webp({quality: 90}))
+  .pipe(dest('build/images'))
   .pipe(imagemin())
   .pipe(dest('build/images/'))
+}
+
+function sprite() {
+  return src('source/images/**/*.svg')
+  .pipe(svgstore({
+    inlineSvg: true
+  }))
+  .pipe(rename('sprite.svg'))
+  .pipe(dest('build/images'))
 }
 
 function fonts() {
@@ -87,9 +101,10 @@ exports.styles       = styles;
 exports.html         = html;
 exports.images       = images;
 exports.cleanimg     = cleanimg;
-exports.build        = series(cleanbuild, fonts, styles, scripts, html, images)
+exports.sprite       = sprite;
+exports.build        = series(cleanbuild, sprite, fonts, styles, scripts, html, images);
 
-exports.default      = parallel(fonts, images, styles, html, scripts, browsersync, startwatch);
+exports.default      = parallel(sprite, fonts, images, styles, html, scripts, browsersync, startwatch);
 
 
 

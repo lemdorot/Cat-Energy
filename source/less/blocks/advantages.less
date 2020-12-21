@@ -1,15 +1,35 @@
 .advantages {
   padding: 0 20px;
+  margin-bottom: 46px;
+  
+  @media (min-width: 768px) {
+    padding: 0 30px;
+    margin-bottom: 52px;
+  }
+  
+  @media (min-width: 1300px) {
+    padding: 0 40px;
+    margin-bottom: 20px;
+  }
 }
 
 .advantages__title {
-  font-weight: 400;
   line-height: 60px;
   font-size: 36px;
+  margin-bottom: 15px;
+  
+  @media (min-width: 768px) {
+    font-size: 60px;
+    margin-bottom: 57px;
+  }
+  
+  @media (min-width: 1300px) {
+    padding-top: 26px;
+  }
 }
 
 .advantages__list {
-  .reset-list;
+  padding-top: 15px;
   
   @media (min-width: 768px) {
     display: flex;
@@ -20,13 +40,67 @@
 .advantages__item {
   position: relative;
   padding-left: 80px;
+  margin-bottom: 26px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
   
   @media (min-width: 768px) {
-    width: 40%;
+    width: 35%;
+    padding-left: 0;
+    padding-top: 112px;
+    padding-bottom: 20px;
+    margin-bottom: 83px;
+    margin-right: 136px;
+    
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+    
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 89px;
+      font-size: 281.07px;
+      color: #f2f2f2;
+      z-index: -1;
+    }
+    
+    &--leaf::after {
+      content: "1";
+      right: 17px;
+    }
+
+    &--powder::after {
+      content: "2";
+    }
+
+    &--dinning::after {
+      content: "3";
+    }
+
+    &--clock::after {
+      content: "4";
+    }
   }
   
   @media (min-width: 1300px) {
     width: 20%;
+    margin-right: 81px;
+    margin-bottom: 0;
+    
+    &:nth-child(2n) {
+      margin-right: 81px;
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
   }
   
   &::before {
@@ -34,13 +108,19 @@
     display: block;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -2px;
     width: 60px;
     height: 60px;
     background-color: #68b738;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50px 50px;
+    
+    @media (min-width: 768px) {
+      top: 0;
+      width: 80px;
+      height: 80px;
+    }
   }
   
   &--leaf::before {
@@ -81,4 +161,8 @@
 
 .advantages__text {
   font-family: "Arial", sans-serif;
+  
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
 }

@@ -1,15 +1,149 @@
+.slider {
+  
+}
+
 .slider__button {
+  width: auto;
   color: #111111;
   background-color: inherit;
+  border: none;
+  
+  &:first-child {
+    margin-left: 52px;
+  }
+  
+  &:last-child {
+    margin-right: 52px;
+  }
   
   @media (min-width: 768px) {
+    padding: 1px 0;
+    padding-bottom: 7px;
     width: auto;
+    font-size: 20px;
+    line-height: 20px;
+    border-bottom: 1px dotted #bebebe;
+    
+    &:first-child {
+      margin-left: 63px;
+    }
+
+    &:last-child {
+      margin-right: 70px;
+    }
+  }
+  
+  @media (min-width: 1300px) {
+    &:first-child {
+      margin-left: 78px;
+    }
+
+    &:last-child {
+      margin-right: 29px;
+    }
   }
 }
 
 .slider__buttons {
+  display: flex;
+  justify-content: center;
+  padding-left: 5px;
+  
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
+  }
+  
+  @media (min-width: 1300px) {
+    padding-left: 0;
+  }
+}
+
+.slider__images {
+  margin-bottom: 31px;
+  height: auto;
+  
+  @media (min-width: 768px) {
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 1300px) {
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.slider__image {
+	display: none;
+  margin: auto;
+  
+  width: 320px;
+  height: 240px;
+  
+  @media (min-width: 768px) {
+    width: 690px;
+    height: 517px;
+  }
+}
+
+.slider__image--active {
+  display: block;
+}
+
+.slider__range {
+  position: relative;
+	width: auto;
+  height: 14px;
+  margin: 0 12px;
+  margin-top: 4px;
+  border: 1px solid #cdcdcd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  flex-grow: 1;
+  
+  @media (min-width: 768px) {
+    height: 6px;
+    margin-left: 24px;
+    margin-right: 20px;
+    margin-top: 9px;
+    border: none;
+    background-color: #dcdcdc;
+  }
+}
+
+.slider__scale {
+	position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 35px;
+  height: 6px;
+  background-color: #68b738;
+  border-radius: 3px;
+  
+  @media (min-width: 768px) {
+    top: -15px;
+    left: 50%;
+    margin-left: -17px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #d3d3d3;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 6px 0 rgba(0,0,0,0.2);
+    
+    &::before {  
+      content: "";
+      position: absolute;
+      
+      top: 12px;
+      left: 12px;
+      
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: #68b738;
+      border-radius: 50%;
+    }
   }
 }

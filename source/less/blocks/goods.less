@@ -1,32 +1,72 @@
 .goods {
+  border-top: 1px solid #cdcdcd;
+  padding-top: 14px;
+  
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+  
+  @media (min-width: 768px) {
+    padding: 0 38px;
+    padding-top: 25px;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+  }
+  
   @media (min-width: 1300px) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    border-left: none;
+    border-right: none;
     display: flex;
+    justify-content: space-between;
   }
 }
 
 .goods__wrapper {
   @media (min-width: 768px) {
+    margin-bottom: 13px;
     display: flex;
     justify-content: space-between
   }
   
   @media (min-width: 1300px) {
-    width: 100%;
+    padding-top: 10px;
+    width: 68.5%;
   }
 }
 
 .goods__name {
+  margin-bottom: 13px;
   font-weight: 400;
   line-height: 16px;
   font-size: 16px;
   text-transform: uppercase;
+  
+  @media (min-width: 768px) {
+    line-height: 20px;
+    font-size: 20px;
+  }
 }
 
 .goods__info {
-  .reset-list;
-  
+  margin-bottom: 14px;
   display: flex;
   justify-content: space-between;
+  
+  @media (min-width: 768px) {
+    padding-top: 7px;
+    margin-bottom: 0;
+    width: 40%;
+    justify-content: flex-end;
+  }
+  
+  @media (min-width: 1300px) {
+    width: 47%;
+    text-align: left;
+    justify-content: space-between;
+  }
 }
 
 .goods__field,
@@ -34,16 +74,44 @@
   font-family: "Arial", sans-serif;
   line-height: 14px;
   font-size: 14px;
+  
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.goods__field {
+  @media (min-width: 1300px) {
+    width: 60%;
+    text-align: left;
+  }
+}
+
+.goods__value {
+  @media (min-width: 768px) {
+    text-align: end;
+    width: 37%;
+  }
+  
+  @media (min-width: 1300px) {
+    width: 15%;
+    text-align: left;
+  }
 }
 
 .goods__button {
 	background-color: #68b738;
+  margin-bottom: 17px;
+	border: none;
+  padding: 10px 0;
   
   @media (min-width: 768px) {
+    margin-bottom: 27px;
     width: 100%;
   }
   
   @media (min-width: 1300px) {
-    width: 20%;
+    margin-bottom: auto;
+    width: 27.5%;
   }
 }

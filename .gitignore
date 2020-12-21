@@ -6,5 +6,6 @@
 *.psd
 build/
 node_modules/
+preview/
 npm-debug.log*
 Thumbs.db

@@ -19,18 +19,18 @@
         <a class="page-header__title-link" href="">
           <img class="page-header__title-img" src="images/logo-mobile-header.svg" alt="Название корма">
         </a>
-        <button class="page-header__toggle" type="button">Открыть меню</button>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="" class="main-nav__link">Главная</a>
+            <a href="index.html" class="main-nav__link">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="" class="main-nav__link">Каталог продукции</a>
+            <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a href="" class="main-nav__link">Подбор программы</a>
+            <a href="form.html" class="main-nav__link">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -72,7 +72,7 @@
                 </ul>
               </div>
             </div>
-            <button class="product__button button">Заказать</button>
+            <a href="form.html" class="product__button button">Заказать</a>
           </li>
           <li class="catalog__item product">
             <div class="product__wrapper">
@@ -105,7 +105,7 @@
                 </ul>
               </div>
             </div>
-            <button class="product__button button">Заказать</button>
+            <a href="form.html" class="product__button button">Заказать</a>
           </li>
           <li class="catalog__item product">
             <div class="product__wrapper">
@@ -138,7 +138,7 @@
                 </ul>
               </div>
             </div>
-            <button class="product__button button">Заказать</button>
+            <a href="form.html" class="product__button button">Заказать</a>
           </li>
           <li class="catalog__item product">
             <div class="product__wrapper">
@@ -171,7 +171,7 @@
                 </ul>
               </div>
             </div>
-            <button class="product__button button">Заказать</button>
+            <a href="form.html" class="product__button button">Заказать</a>
           </li>
           <li class="catalog__item product">
             <div class="product__wrapper">
@@ -204,7 +204,7 @@
                 </ul>
               </div>
             </div>
-            <button class="product__button button">Заказать</button>
+            <a href="form.html" class="product__button button">Заказать</a>
           </li>
           <li class="catalog__item product">
             <div class="product__wrapper">
@@ -237,7 +237,7 @@
                 </ul>
               </div>
             </div>
-            <button class="product__button button">Заказать</button>
+            <a href="form.html" class="product__button button">Заказать</a>
           </li>
           <li class="catalog__item product">
             <div class="product__wrapper">
@@ -270,10 +270,10 @@
                 </ul>
               </div>
             </div>
-            <button class="product__button button">Заказать</button>
+            <a href="form.html" class="product__button button">Заказать</a>
           </li>
-          <li class="catalog__item">
-            <div class="catalog__more-prodicts more-products">
+          <li class="catalog__item catalog__more">
+            <div class="catalog__more-products more-products">
               <h4 class="more-products__title">Показать еще 100500 товаров</h4>
               <p class="more-products__text">На самом деле вкусов гораздо больше!</p>
               <button class="more-products__button button">Показать все</button>
@@ -282,19 +282,23 @@
         </ul>
       </section>
       
-        <section class="additional container">
-          <h3 class="additional__title">Дополнительные товары</h3>
-          <div class="additional__wrapper">
+        <section class="additional">
+          <div class="additional__subtitle-wrapper subtitle-wrapper">
+            <div class="container">
+              <h3 class="additional__subtitle subtitle">Дополнительные товары</h3>
+            </div>
+          </div>
+          <div class="additional__wrapper container">
             <ul class="additional__goods-list">
               <li class="additional__goods-item goods">
                 <div class="goods__wrapper">
                   <h4 class="goods__name">Сахарозаменитель</h4>
                   <ul class="goods__info">
                     <li class="goods__field">1 упаковка (100 г)</li>
-                    <li class="goods__value">100 Р.</li>
+                    <li class="goods__value">200 Р.</li>
                   </ul>
                 </div>
-                <button class="goods__button button">Заказать</button>
+                <a href="form.html" class="goods__button button">Заказать</a>
               </li>
               <li class="additional__goods-item goods">
                 <div class="goods__wrapper">
@@ -304,7 +308,7 @@
                     <li class="goods__value">50 Р.</li>
                   </ul>
                 </div>
-                <button class="goods__button button">Заказать</button>
+                <a href="form.html" class="goods__button button">Заказать</a>
               </li>
               <li class="additional__goods-item goods">
                 <div class="goods__wrapper">
@@ -314,7 +318,7 @@
                     <li class="goods__value">100 Р.</li>
                   </ul>
                 </div>
-                <button class="goods__button button">Заказать</button>
+                <a href="form.html" class="goods__button button">Заказать</a>
               </li>
               <li class="additional__goods-item goods">
                 <div class="goods__wrapper">
@@ -324,14 +328,14 @@
                     <li class="goods__value">300 Р.</li>
                   </ul>
                 </div>
-                <button class="goods__button button">Заказать</button>
+                <a href="form.html" class="goods__button button">Заказать</a>
               </li>
             </ul>
 
             <div class="additional__gift gift">
               <div class="gift__wrapper">
-                <img src="" alt="" class="gift__img">
-                <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
+                <img src="images/icon-gift.svg" width="55.5" height="60" alt="" class="gift__img">
+                <p class="gift__text">Закажите все <br> и получите чехол для <br> кота в подарок!</p>
               </div>
             </div>
           </div>
@@ -340,17 +344,17 @@
       
     </main>
     
-    <footer class="page-footer container">
+    <footer class="page-footer">
      
-      <section class="page-footer contacts contacts--bg-white">
-        <div class="contacts__wrapper">
-          <p class="contacts__text">приглашаем  к сотрудничеству  дилеров!</p>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
+      <section class="page-footer contacts">
+        <div class="contacts__wrapper container">
+          <p class="contacts__text">приглашаем <br> к сотрудничеству  дилеров!</p>
+          <p class="contacts__address">ул. Большая <br> Конюшенная, д. 19/8 <br><br>  Санкт-Петербург</p>
         </div>
         <div class="contacts__map"></div>
       </section>
       
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper container">
         <div class="page-footer__logo footer-logo">
           <a href="" class="footer-logo__link">
             <img src="images/logo-footer.svg" alt="" class="footer-logo__img">
@@ -360,17 +364,17 @@
           <ul class="footer-social__list">
             <li class="footer-social__item">
               <a href="" class="footer-social__link">
-                <img src="images/icon-vk-mobile.svg" alt="Vkontakte" class="footer-social__img" width="22" height="12">
+                <img src="images/icon-vk-mobile.svg" alt="Vkontakte" class="footer-social__img footer-social__img--vk" width="22" height="12">
               </a>
             </li>
             <li class="footer-social__item">
               <a href="" class="footer-social__link">
-                <img src="images/icon-insta-mobile.svg" alt="Instagram" class="footer-social__img" width="16" height="16">
+                <img src="images/icon-insta-mobile.svg" alt="Instagram" class="footer-social__img footer-social__img--insta" width="16" height="16">
               </a>
             </li>
             <li class="footer-social__item">
               <a href="" class="footer-social__link">
-                <img src="images/icon-fb-mobile.svg" alt="Facebook" class="footer-social__img" width="10" height="19">
+                <img src="images/icon-fb-mobile.svg" alt="Facebook" class="footer-social__img  footer-social__img--fb" width="10" height="19">
               </a>
             </li>
           </ul>

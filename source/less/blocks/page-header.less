@@ -1,15 +1,41 @@
 .page-header {
+  position: relative;
   padding: 0 20px;
+  border-bottom: 1px solid #e6e6e6;
   
   @media (min-width: 768px){
+    border: none;
+    margin-bottom: 27px;
+    padding: 0 30px;
+    padding-top: 13px;
+    
     display: flex;
     justify-content: space-between;
   }
+  
+  @media (min-width: 1300px){
+    padding: 0 40px;
+    padding-top: 41px;
+  }
 }
 
-.page-header__toggle {
-  @media (min-width: 768px) {
-    display: none;
+.page-header--index {
+  @media (min-width: 1300px){
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -69px;
+      display: block;
+      width: 720px;
+      height: 696px;
+      background: url(../images/index-background-desktop.jpg);
+      background-position: 0 0;
+      background-size: 720px 696px;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
   }
 }
 
@@ -34,7 +60,17 @@
 }
 
 .page-header__title-link {
+  padding-left: 57px;
+  padding-top: 12px;
+  
   @media (min-width: 768px) {
     display: none;
   }
+}
+
+.page-header__wrapper {
+	display: flex;
+  justify-content: start;
+  padding-top: 12px;
+  padding-bottom: 15px;
 }

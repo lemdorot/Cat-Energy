@@ -1,12 +1,15 @@
 .more-products {
   position: relative;
+  padding: 0 20px;
+  padding-top: 80px;
   
   &::before {
     content: "";
     display: block;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 50%;
+    margin-left: -15px;
+    top: 27px;
     width: 30px;
     height: 30px;
     background-image: url(../../images/plus-mobile.svg);
@@ -14,24 +17,64 @@
     background-position: center;
     background-size: 30px 30px;
   }
+  
+  @media (min-width: 768px) {
+    padding: 0 38px;
+    padding-top: 164px;
+    
+    &::before {
+      top: 54px;
+      margin-left: -29px;
+      width: 60px;
+      height: 60px;
+      background-size: 60px 60px;
+    }
+  }
 }
 
 .more-products__title {
-  font-weight: 400;
+  margin-bottom: 8px;
   line-height: 20px;
   font-size: 16px;
   text-transform: uppercase;
+  text-align: center;
+  
+  @media (min-width: 768px) {
+    font-size: 20px;
+    padding: 0 50px;
+    margin-bottom: 25px;
+  }
+  
+  @media (min-width: 1300px) {
+    padding: 0 15px;
+  }
 }
 
 .more-products__text {
+  margin-bottom: 21px;
   font-family: "Arial", sans-serif;
   line-height: 16px;
   font-size: 12px;
+  text-align: center;
+  
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 35px;
+    margin-bottom: 83px;
+  }
+  
+  @media (min-width: 1300px) {
+    padding: 0;
+  }
 }
 
 .more-products__button {
+  margin-bottom: 24px;
   color: #444444;
   background-color: #f2f2f2;
+	border: none;
+  padding: 10px 0;
   
   @media (min-width: 768px) {
     width: 100%;
