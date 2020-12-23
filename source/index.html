@@ -24,7 +24,7 @@
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html" class="main-nav__link">Главная</a>
+            <a href="index.html" class="main-nav__link main-nav__link--active">Главная</a>
           </li>
           <li class="main-nav__item">
             <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
@@ -124,11 +124,11 @@
               </picture>
             </div>
             <div class="slider__buttons">
-              <button class="slider__button button">Было</button>
+              <button class="slider__button">Было</button>
               <div class="slider__range">
                 <div class="slider__scale"></div>
               </div>
-              <button class="slider__button button">Стало</button>
+              <button class="slider__button">Стало</button>
             </div>
           </div>
         </div>
@@ -156,25 +156,33 @@
           <ul class="footer-social__list">
             <li class="footer-social__item">
               <a href="" class="footer-social__link">
-                <img src="images/icon-vk-mobile.svg" alt="Vkontakte" class="footer-social__img footer-social__img--vk" width="22" height="12">
+                <svg class="footer-social__img footer-social__img--vk" width="22" height="12">
+                  <use xlink:href="images/sprite.svg#icon-vk-mobile"></use>
+                </svg>
               </a>
             </li>
             <li class="footer-social__item">
               <a href="" class="footer-social__link">
-                <img src="images/icon-insta-mobile.svg" alt="Instagram" class="footer-social__img footer-social__img--insta" width="16" height="16">
+                <svg class="footer-social__img footer-social__img--insta" width="16" height="16">
+                  <use xlink:href="images/sprite.svg#icon-insta-mobile"></use>
+                </svg>
               </a>
             </li>
             <li class="footer-social__item">
               <a href="" class="footer-social__link">
-                <img src="images/icon-fb-mobile.svg" alt="Facebook" class="footer-social__img  footer-social__img--fb" width="10" height="19">
+                <svg class="footer-social__img footer-social__img--fb" width="10" height="19">
+                  <use xlink:href="images/sprite.svg#icon-fb-mobile"></use>
+                </svg>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright footer-copyright">
-          <b class="footer-copyright__text">HTML Academy</b>
           <a href="" class="footer-copyright__link">
-            <img src="images/icon-htmlacademy.svg" alt="HTMLAcademy" class="footer-social__img" width="27" height="35">
+            <span class="footer-copyright__text">HTML Academy</span>
+            <svg class="footer-copyright__img" width="27" height="35">
+              <use xlink:href="images/sprite.svg#icon-htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </div>

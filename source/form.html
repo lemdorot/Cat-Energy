@@ -30,7 +30,7 @@
             <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html" class="main-nav__link">Подбор программы</a>
+            <a href="form.html" class="main-nav__link  main-nav__link--active">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -97,14 +97,18 @@
                 <label for="owner-email" class="field-text__label field-text__label--email">E-mail:*</label>
                 <div class="field-text__input-wrapper field-text__input-wrapper--icon">
                   <input type="email" class="field-text__input" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
-                  <img src="images/icon-mail.svg" class="field-text__icon field-text__icon--email">
+                  <svg class="field-text__icon field-text__icon--email" width="17" height="13">
+                    <use xlink:href="images/sprite.svg#icon-mail"></use>
+                  </svg>
                 </div>
               </div>
               <div class="form__row field-text field-text--tel">
                 <label for="owner-tel" class="field-text__label field-text__label--tel">Телефон:*</label>
                 <div class="field-text__input-wrapper field-text__input-wrapper--icon">
                   <input type="tel" class="field-text__input" name="owner-tel" id="owner-tel" placeholder="8 (960) 900-60-90" required>
-                  <img src="images/icon-phone.svg" class="field-text__icon field-text__icon--tel">
+                  <svg class="field-text__icon field-text__icon--tel" width="20" height="20">
+                    <use xlink:href="images/sprite.svg#icon-phone"></use>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -180,25 +184,33 @@
           <ul class="footer-social__list">
             <li class="footer-social__item">
               <a href="" class="footer-social__link">
-                <img src="images/icon-vk-mobile.svg" alt="Vkontakte" class="footer-social__img footer-social__img--vk" width="22" height="12">
+                <svg class="footer-social__img footer-social__img--vk" width="22" height="12">
+                  <use xlink:href="images/sprite.svg#icon-vk-mobile"></use>
+                </svg>
               </a>
             </li>
             <li class="footer-social__item">
               <a href="" class="footer-social__link">
-                <img src="images/icon-insta-mobile.svg" alt="Instagram" class="footer-social__img footer-social__img--insta" width="16" height="16">
+                <svg class="footer-social__img footer-social__img--insta" width="16" height="16">
+                  <use xlink:href="images/sprite.svg#icon-insta-mobile"></use>
+                </svg>
               </a>
             </li>
             <li class="footer-social__item">
               <a href="" class="footer-social__link">
-                <img src="images/icon-fb-mobile.svg" alt="Facebook" class="footer-social__img  footer-social__img--fb" width="10" height="19">
+                <svg class="footer-social__img footer-social__img--fb" width="10" height="19">
+                  <use xlink:href="images/sprite.svg#icon-fb-mobile"></use>
+                </svg>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright footer-copyright">
-          <b class="footer-copyright__text">HTML Academy</b>
           <a href="" class="footer-copyright__link">
-            <img src="images/icon-htmlacademy.svg" alt="HTMLAcademy" class="footer-social__img" width="27" height="35">
+            <span class="footer-copyright__text">HTML Academy</span>
+            <svg class="footer-copyright__img" width="27" height="35">
+              <use xlink:href="images/sprite.svg#icon-htmlacademy"></use>
+            </svg>
           </a>
         </div>
       </div>

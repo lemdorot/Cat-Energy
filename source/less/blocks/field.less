@@ -12,6 +12,7 @@
 }
 
 .field-text__label,
+.field-text__input,
 .field-text__input::placeholder,
 .field-radio__label,
 .field-check__label {
@@ -45,10 +46,31 @@
   padding-top: 13px;
   padding-bottom: 12px;
   flex-grow: 1;
+  border: 1px solid #e6e6e6;
+  outline: none;
+  
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+  
+  &:focus {
+    border: 1px solid #444444;
+    
+    &+.field-text__icon {
+      fill: #68b738;
+    }
+  }
+  
+//  &:invalid {
+//    border: 1px solid #ff8282;
+//      &+.field-text__icon {
+//        fill: #ff8282;
+//      }
+//  }
   
   @media (min-width: 768px) {
-    padding-top: 16px;
-    padding-bottom: 13px;
+    padding-top: 10px;
+    padding-bottom: 9px;
     padding-left: 20px;
   }
 }
@@ -139,6 +161,7 @@
 .field-check__label {
   position: relative;
   padding-left: 46px;
+  cursor: pointer;
   
   &::before {
     position: absolute;
@@ -148,6 +171,17 @@
     width: 30px;
     height: 30px;
     border: 1px solid #cecece;
+  }
+  
+  &:hover,
+  &:focus {
+    &::before {
+      border: 1px solid #bcbcbc;
+    }
+  }
+  
+  &:active {
+    opacity: 0.3;
   }
   
   @media (min-width: 768px) {
@@ -176,6 +210,7 @@
 .field-radio__label {
   position: relative;
   padding-left: 45px;
+  cursor: pointer;
   
   &::before {
     position: absolute;
@@ -200,6 +235,17 @@
     background-color: #68b738;
   }
   
+  &:hover,
+  &:focus {
+    &::before {
+      border: 1px solid #bcbcbc;
+    }
+  }
+  
+  &:active {
+    opacity: 0.3;
+  }
+  
   @media (min-width: 768px) {
     padding-left: 60px;
     
@@ -210,7 +256,7 @@
     
     &::after {
       top: 7px;
-      left: 11px;
+      left: 10px;
       width: 18px;
       height: 18px;
     }

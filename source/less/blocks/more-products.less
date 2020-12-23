@@ -1,7 +1,6 @@
 .more-products {
   position: relative;
-  padding: 0 20px;
-  padding-top: 80px;
+  padding: 80px 20px 24px 20px;
   
   &::before {
     content: "";
@@ -19,8 +18,7 @@
   }
   
   @media (min-width: 768px) {
-    padding: 0 38px;
-    padding-top: 164px;
+    padding: 164px 38px 39px 38px;
     
     &::before {
       top: 54px;
@@ -70,13 +68,15 @@
 }
 
 .more-products__button {
-  margin-bottom: 24px;
   color: #444444;
   background-color: #f2f2f2;
-	border: none;
-  padding: 10px 0;
   
-  @media (min-width: 768px) {
-    width: 100%;
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+  
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
   }
 }
