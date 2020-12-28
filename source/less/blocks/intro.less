@@ -1,59 +1,55 @@
 .intro {
-  padding: 0 20px;
   padding-top: 27px;
-  color: #ffffff;
   background: url(../images/index-background-mobile.jpg) no-repeat;
   background-size: contain;
   
   @media (min-width: 768px) {
+    padding-top: 16px;
     display: flex;
     flex-direction: column;
     background-image: none;
-    padding: 0 30px;
-    padding-top: 16px;
   }
   
   @media (min-width: 1300px) {
-    margin-bottom: 80px;
+    margin-bottom: 82px;
     padding-top: 67px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
     height: 540px;
+    flex-wrap: wrap;
+    align-content: flex-start;
   }
 }
 
 .intro__title {
   margin-bottom: 25px;
-  font-size: 36px;
   line-height: 36px;
+  color: #ffffff;
   text-align: center;
   
   @media (min-width: 768px) {
     margin-bottom: 41px;
-    padding-left: 90px;
-    padding-right: 60px;
-    color: #111111;
-    font-size: 60px;
+    padding: 0 60px 0 90px;
     line-height: 60px;
-    text-align: start;
+    color: #111111;
+    text-align: left;
   }
   
   @media (min-width: 1300px) {
     padding-right: 0;
+    padding: 0 0 0 80px;
     width: 41%;
   }
 }
 
 .intro__slogan {
   margin: 0;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 28px;
   line-height: 14px;
   text-transform: uppercase;
   
   @media (min-width: 768px) {
-    margin-bottom: 47px;
+    margin-bottom: 48px;
     padding-left: 90px;
     color: #111111;
     font-size: 20px;
@@ -62,7 +58,8 @@
   }
   
   @media (min-width: 1300px) {
-    margin-bottom: 52px;
+    padding-left: 80px;
+    margin-bottom: 53px;
   }
 }
 
@@ -80,9 +77,14 @@
     font-size: 20px;
     z-index: 1;
   }
+  
+  @media (min-width: 1300px) {
+    margin-left: 80px;
+  }
 }
 
 .intro__picture {
+  background-color: transparent;
   @media (min-width: 768px) {
     order: 1;
     margin-top: -100px;
@@ -91,6 +93,18 @@
   @media (min-width: 1300px) {
     margin-top: -81px;
     margin-left: -48px;
+    
+    animation: move 1s ease-out;
+  }
+}
+
+@keyframes move {
+  from {
+    margin-left: -200px;
+  }
+  to {
+    margin-left: -48px;
+    animation-duration: .5s;
   }
 }
 

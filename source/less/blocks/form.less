@@ -17,11 +17,8 @@
 
 .form__title {
   margin-bottom: 25px;
-  line-height: 60px;
-  font-size: 36px;
   
   @media (min-width: 768px) {
-    font-size: 60px;
     margin-bottom: 56px;
   }
 }
@@ -40,11 +37,6 @@
   @media (min-width: 1300px) {
     padding-left: 0;
   }
-}
-
-.form__block-subtitle {
-  line-height: 24px;
-  font-size: 24px;
 }
 
 .form__note-text {
@@ -89,9 +81,13 @@
 }
 
 .form__fields--personal {
-  @media (min-width: 1300px) {
+  @media (min-width: 768px) {
     padding-left: 41px;
-    padding-right: 0;
+    padding-right: 37px;
+  }
+  
+  @media (min-width: 1300px) {
+    padding: 0;
   }
 }
 
@@ -99,12 +95,13 @@
   border: 1px solid #ededed;
   
   @media (min-width: 768px) {
+    padding-left: 41px;
+    padding-right: 37px;
     border: none;
   }
   
   @media (min-width: 1300px) {
-    padding-left: 0;
-    padding-right: 41px;
+    padding: 0;
   }
 }
 
@@ -144,30 +141,21 @@
 .form__block--personal,
 .form__block--program {
   @media (min-width: 1300px) {
-    width: 47%;
+    width: 46.8%;
     
   }
 }
 
 .form__block-subtitle {
   display: inline-block;
-  padding: 0 20px;
+  background-color: #ffffff;
+  line-height: 24px;
+  font-size: 24px;
   
   @media (min-width: 768px) {
-    padding-right: 30px;
-    padding-left: 40px;
-    margin-left: 30px;
-    line-height: 36px;
-    font-size: 36px;
-    
     & br {
       display: none;
     }
-  }
-  
-  @media (min-width: 1300px) {
-    padding-left: 40px;
-    margin-left: 0;
   }
 }
 

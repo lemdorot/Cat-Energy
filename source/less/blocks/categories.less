@@ -1,14 +1,8 @@
 .categories {
-  padding: 0 20px;
   margin-bottom: 18px;
   
   @media (min-width: 768px) {
-    padding: 0 30px;
     margin-bottom: 47px;
-  }
-  
-  @media (min-width: 1300px) {
-    padding: 0 40px;
   }
 }
 
@@ -20,22 +14,20 @@
   }
 }
 
-.categories__title {
+.categories__subtitle {
   margin-bottom: 29px;
+  padding-left: 91px;
   line-height: 37.02px;
-  font-size: 24px;
   text-transform: uppercase;
-  padding-left: 70px;
   
   @media (min-width: 768px) {
-    font-size: 36px;
     padding-left: 0;
     margin-bottom: 25px;
   }
   
   @media (min-width: 1300px) {
     margin-bottom: 74px;
-    padding-left: 162px;
+    padding-left: 202px;
   }
 }
 
@@ -68,6 +60,7 @@
       background-image: url(../../images/icon-right-arrow-verylong.svg);
       width: 32px;
       right: -13px;
+      transition: 0.3s ease-out;
     }
   }
   

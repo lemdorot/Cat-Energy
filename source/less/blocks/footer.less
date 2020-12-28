@@ -15,7 +15,7 @@
 
 .footer-social__list {
   padding-top: 24px;
-  padding-bottom: 19px;
+  padding-bottom: 16px;
   padding-right: 13px;
   display: flex;
   justify-content: center;
@@ -96,7 +96,6 @@
 }
 
 .footer-copyright {
-  display: flex;
   padding-top: 30px;
   padding-bottom: 23px;
   
@@ -108,6 +107,7 @@
 .footer-copyright__link {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: -8px;
   
   &:hover .footer-copyright__img,
@@ -118,11 +118,10 @@
   &:active {
     opacity: 0.3;
   }
-}
-
-.footer-copyright {
-	display: flex;
-  justify-content: space-between;
+  
+  @media (min-width: 768px) {
+    
+  }
 }
 
 .footer-copyright__text {

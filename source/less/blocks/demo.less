@@ -1,10 +1,11 @@
 .demo {
   position: relative;
   margin-bottom: 1px;
-  padding-bottom: 35px;
+  padding-bottom: 34px;
   background-color: #f2f2f2;
   
   @media (min-width: 768px) {
+    padding-bottom: 67px;
     background-color: transparent;
     border-top: 1px solid #e6e6e6;
     
@@ -32,22 +33,22 @@
 }
 
 .demo__inner {
+  
 	@media (min-width: 1300px) {
     display: flex;
+    padding-right: 0;
     padding-left: 40px;
   }
 }
 
 .demo__wrapper {
   margin-bottom: 19px;
-  padding: 0 20px;
   padding-top: 17px;
   display: flex;
   flex-direction: column;
   background-color: inherit;
   
   @media (min-width: 768px) {
-    padding: 0 30px;
     padding-top: 43px;
     margin-bottom: 50px;
   }
@@ -63,11 +64,8 @@
 
 .demo__title {
   margin-bottom: 23px;
-  line-height: 60px;
-  font-size: 36px;
   
   @media (min-width: 768px) {
-    font-size: 60px;
     margin-bottom: 64px;
   }
   
@@ -214,12 +212,10 @@
 
 .demo__slider {
   @media (min-width: 768px) {
-    padding: 0 30px;
     margin-bottom: 33px;
   }
   
   @media (min-width: 1300px) {
-    padding: 0;
     margin-bottom: 0;
     width: 677px;
     margin-right: -11px;

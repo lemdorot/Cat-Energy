@@ -16,15 +16,11 @@
 }
 
 .catalog__title {
-  padding: 0 20px;
   margin-bottom: 28px;
-  line-height: 60px;
-  font-size: 36px;
   
   @media (min-width: 768px) {
     padding: 0;
     margin-bottom: 84px;
-    font-size: 60px;
   }
 }
 
@@ -43,12 +39,16 @@
 .catalog__item {
   border: 1px solid #ededed;
   border-bottom: none;
+  margin-right: -20px;
+  margin-left: -20px;
   
   &:last-child {
     border-bottom: 1px solid #ededed;
   }
   
   @media (min-width: 768px) {
+    margin-right: 0;
+    margin-left: 0;
     width: 45.8%;
     margin-bottom: 59px;
     background-image: linear-gradient(to bottom,transparent 0,transparent 80px,#f2f2f2 80px,#f2f2f2 100%);
@@ -74,9 +74,13 @@
 }
 
 .catalog__more {
+  margin-right: -20px;
+  margin-left: -20px;
   background: none;
   
   @media (min-width: 768px) {
     margin-top: 80px;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
