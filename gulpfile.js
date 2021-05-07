@@ -6,6 +6,7 @@ const concat        = require('gulp-concat');
 const uglify        = require('gulp-uglify-es').default;
 const sass          = require('gulp-sass');
 const less          = require('gulp-less');
+const posthtml      = require("gulp-posthtml");
 const autoprefixer  = require('gulp-autoprefixer');
 const cleancss      = require('gulp-clean-css');
 const imagemin      = require('gulp-imagemin');
@@ -14,6 +15,7 @@ const del           = require('del');
 const svgstore      = require('gulp-svgstore');
 const webp          = require('gulp-webp');
 const rename        = require('gulp-rename');
+const include       = require("posthtml-include");
 
 function browsersync() {
   browserSync.init({
@@ -43,6 +45,9 @@ function styles() {
 
 function html() {
   return src('source/*html')
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(dest("build"))
     .pipe(browserSync.stream())
 }
