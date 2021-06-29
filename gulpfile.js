@@ -56,9 +56,11 @@ function html() {
 function images() {
   return src('source/images/**/*.{png,jpg,svg}')
   .pipe(newer('build/images/'))
+  .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo()]))
+  .pipe(dest('build/images/'))
   .pipe(webp({quality: 90}))
-  .pipe(dest('build/images'))
-  .pipe(imagemin())
   .pipe(dest('build/images/'))
 }
 
@@ -84,19 +86,20 @@ function cleanbuild() {
   return del('build/**/*', { force: true })
 }
 
-//function buildcopy() {
-//  return src([
-//    'app/css/**/*.min.css',
-//    'app/js/**/*.min.js',
-//    'app/images/dest/**/*',
-//    'app/**/*.html',
-//  ], { base: 'source' })
-//  .pipe(dest('dist'));
-//}
+function buildcopy() {
+ return src([
+   'build/css/**/*.min.css',
+   'build/js/**/*.min.js',
+   'build/fonts/**/*',
+   'build/images/**/*',
+   'build/**/*.html',
+ ], { base: 'build' })
+ .pipe(dest('build-remote'));
+}
 
 function startwatch() {
-  watch('source/**' + preprocessor + '/**/*', styles);
-  watch(['source/**/*.js', '!app/**/*.min.js'], scripts);
+  watch('source/' + preprocessor + '/**/*', styles);
+  watch(['source/**/*.js', '!build/**/*.min.js'], scripts);
   watch('source/**/*.html', html);
   watch('source/images/src/**/*', images);
 }
@@ -108,7 +111,7 @@ exports.html         = html;
 exports.images       = images;
 exports.cleanimg     = cleanimg;
 exports.sprite       = sprite;
-exports.build        = series(cleanbuild, sprite, fonts, styles, scripts, html, images);
+exports.build        = series(cleanbuild, sprite, fonts, styles, scripts, html, images, buildcopy);
 
 exports.default      = parallel(sprite, fonts, images, styles, html, scripts, browsersync, startwatch);
 

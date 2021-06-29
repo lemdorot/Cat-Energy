@@ -5,6 +5,7 @@
 *.pdf
 *.psd
 build/
+build-remote/
 node_modules/
 preview/
 npm-debug.log*

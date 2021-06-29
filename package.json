@@ -26,5 +26,6 @@
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
     "posthtml-include": "^1.7.1"
-  }
+  },
+  "dependencies": {}
 }

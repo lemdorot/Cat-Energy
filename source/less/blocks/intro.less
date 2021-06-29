@@ -1,7 +1,14 @@
 .intro {
   padding-top: 27px;
-  background: url(../images/index-background-mobile.jpg) no-repeat;
+  background-image: url(../images/index-background-mobile@1x.jpg);
+  background-repeat: no-repeat;
   background-size: contain;
+
+  @media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    background-image: url(../images/index-background-mobile@2x.jpg);
+
+  }
   
   @media (min-width: 768px) {
     padding-top: 16px;
