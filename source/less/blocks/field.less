@@ -11,13 +11,23 @@
 
 .field-text__label,
 .field-text__input,
-.field-text__input::placeholder,
 .field-radio__label,
 .field-check__label {
   line-height: 18px;
   font-size: 16px;
   text-transform: uppercase;
   
+  @media (min-width: 768px) {
+    line-height: 20px;
+    font-size: 20px;
+  }
+}
+
+.field-text__input::placeholder {
+  line-height: 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+
   @media (min-width: 768px) {
     line-height: 20px;
     font-size: 20px;

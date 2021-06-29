@@ -107,7 +107,6 @@
 }
 
 .demo__stats-value {
-  margin-bottom: 9px;
   line-height: 24px;
   font-size: 24px;
   text-transform: uppercase;
@@ -116,14 +115,15 @@
   @media (min-width: 768px) {
     line-height: 37.02px;
     font-size: 30px;
-    margin-bottom: 10px;
   }
 }
 
 .demo__stats-subtitle {
   display: inline-block;
+  position: relative;
+  bottom: -10px;
   margin: auto;
-  margin-bottom: -16px;
+  margin-left: auto;
   padding: 0 15px;
   line-height: 12px;
   font-size: 12px;
@@ -181,14 +181,13 @@
 }
 
 .demo__stats-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
   width: 44.2%;
   border: 1px solid #cdcdcd;
   border-radius: 2px;
   background-color: inherit;
   padding-top: 13px;
+  text-align: center;
   
   @media (min-width: 768px) {
     padding-top: 15px;

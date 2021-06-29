@@ -16,6 +16,7 @@ const svgstore      = require('gulp-svgstore');
 const webp          = require('gulp-webp');
 const rename        = require('gulp-rename');
 const include       = require("posthtml-include");
+const jsmin         = require("gulp-jsmin");
 
 function browsersync() {
   browserSync.init({
@@ -27,8 +28,8 @@ function browsersync() {
 
 function scripts() {
   return src('source/js/**/*.js')
-  .pipe(concat('app.min.js'))
-  .pipe(uglify())
+  .pipe(jsmin())
+  .pipe(rename({suffix: ".min"}))
   .pipe(dest('build/js/'))
   .pipe(browserSync.stream())
 }
